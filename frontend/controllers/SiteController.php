@@ -81,7 +81,7 @@ class SiteController extends Controller
      * @return mixed
      */
     public function actionLogin()
-    {
+    {   
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -115,6 +115,7 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+        $this->layout = 'pages';
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
@@ -138,7 +139,14 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        $this->layout = 'pages';
         return $this->render('about');
+    }
+
+    public function actionPlanaccion()
+    {
+        $this->layout = 'pages';
+        return $this->render('planaccion');
     }
 
     /**

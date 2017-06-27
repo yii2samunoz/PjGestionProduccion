@@ -24,13 +24,14 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
+
 <?php
 NavBar::begin([
     'brandLabel' => Html::img('@web/images/secondLogoProyecto.svg', ['class' => 'logo-navbar-index', 'alt' => 'logo']),
     'brandUrl' => Yii::$app->homeUrl,
     'brandOptions' => ['class' => 'navbar-brand-index'],
     'options' => [
-        'class' => 'navbar-default navbar-fixed-top',
+        'class' => 'navbar-default navbar-fixed-top asd',
     ],
 ]);
 $menuItems = [
@@ -56,12 +57,21 @@ echo Nav::widget([
 ]);
 NavBar::end();
 ?>
+<?php if (isset($this->blocks['jumbotron-pages'])): ?>
+    <?= $this->blocks['jumbotron-pages'] ?>
+<?php endif; ?>
 
 
 <?= Alert::widget() ?>
 <?= $content ?>
 
 
+<footer class="footer">
+    <div class="container">
+        <p class="pull-left">&copy; Red de Conocimiento - Gestión de la Producción <?= date('Y') ?></p>
+
+    </div>
+</footer>
 
 <?php $this->endBody() ?>
 </body>
