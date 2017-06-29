@@ -428,11 +428,11 @@ a.desc:after {
     background: url(../images/student.png)no-repeat right bottom;
 }
 .course-second-article {
-    background: url(http://cloud.cuc.edu.co/bienestar/images/imagenes/bu1.png)no-repeat right bottom;
+    background: url(../images/bu1.png)no-repeat right bottom;
     background-size: contain;
 }
 .course-third-article {
-    background: url(http://www.elisava.net/sites/default/files/styles/wysiwyg100/public/elisava-incoming-students_0.png?itok=zokKgahN)no-repeat right bottom;
+    background: url(../images/elisava-incoming-students_0.png)no-repeat right bottom;
     background-size: cover;
 }
 .course-second-article:after, .course-third-article:after, .course-first-article:after {
