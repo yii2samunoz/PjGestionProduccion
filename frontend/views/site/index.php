@@ -4,8 +4,6 @@
 use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
-<?php $this->beginBlock('navbar-index'); ?>
-<?php $this->endBlock(); ?>
 <div class="site-index">
 
     <div class="jumbotron jumbotron-index hero-index">
@@ -127,70 +125,58 @@ $this->title = 'My Yii Application';
 
         </div>
         <section class="courses-section">
-            <div class="container">
-                <h1 class="text-center" style="font-size: 3.4rem;">Programas de Formación SENA</h1>
-               <div class="row">
-                    <div class="col-lg-8">
-
-
-                       <div class="row course-card">
-                           <div class="col-lg-5">
-                                <h2 class="text-center" style="font-size: 3.4rem;">Técnicos</h2>
-                                <span class="fa fa-fw fa-graduation-cap"></span>
-                           </div>
-                           <div class="col-lg-7">
-                               <ul class="list-unstyled courses-list">
-                                   <li>Salud Ocupacional</li>
-                                   <li>Alistamiento y operación de maquinaria para la producción industrial</li>
-                                   <li>Procesos de manufactura</li>
-                               </ul>
-                           </div>
-                       </div>
-                       <div class="row course-card">
-                           <div class="col-lg-5">
-                                <h2 class="text-center" style="font-size: 3.4rem;">Tecnólogos</h2>
-                                <span class="fa fa-fw fa-graduation-cap"></span>
-                           </div>
-                           <div class="col-lg-7">
-                               <ul class="list-unstyled courses-list">
-                                   <li>Gestión integrada de la calidad, medio ambiente, seguridad y salud ocupacional</li>
-                                   <li>Gestión de la producción industrial</li>
-                                   <li>Gestión de recursos en plantas de producción</li>
-                                   <li>Salud ocupacional</li>
-                               </ul>
-                           </div>
-                       </div>
-                       <div class="row course-card">
-                           <div class="col-lg-5">
-                                <h2 class="text-center" style="font-size: 3.4rem;">Especialización Tecnológica</h2>
-                                <span class="fa fa-fw fa-graduation-cap"></span>
-                           </div>
-                           <div class="col-lg-7">
-                               <ul class="list-unstyled courses-list">
-                                   <li>Gestión en laboratorios de ensayo y calibración - Norma ISO/IEC 17025</li>
-                                   <li>Supervisión de buenas prácticas de manufactura</li>
-                               </ul>
-                           </div>
-                       </div>
+                <article class="course-first-article">
+                    <div class="container">
+                        <h1 class="section-course-title">Programas de Fomación <strong>SENA</strong></h1>
+                        <div class="course-container">                    
+                            <div class="cfirst-container">
+                               <h1 class="sarticle-title">Técnicos</h1>
+                                <ul class="list-unstyled courses-list">
+                                   <li><i class="fa fa-fw fa-circle"></i>Salud Ocupacional</li>
+                                   <li><i class="fa fa-fw fa-circle"></i>Alistamiento y operación de maquinaria para la producción industrial</li>
+                                   <li><i class="fa fa-fw fa-circle"></i>Procesos de manufactura</li>
+                                </ul>                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <!--<?= Html::img('@web/images/student.png', ['alt' => 'student']) ?>-->                            
+                </article>
+                <article class="course-second-article">
+                   <i class="fa fa-fw fa-graduation-cap"></i>
+                    <div class="container">
+                        <div class="course-container">
+                            <div class="cfirst-container">
+                               <h1 class="sarticle-title">Tecnólogos</h1>
+                                <ul class="list-unstyled courses-list">
+                                   <li><i class="fa fa-fw fa-circle"></i>Gestión integrada de la calidad, medio ambiente, seguridad y salud ocupacional</li>
+                                   <li><i class="fa fa-fw fa-circle"></i>Gestión de la producción industrial</li>
+                                   <li><i class="fa fa-fw fa-circle"></i>Gestión de recursos en plantas de producción</li>
+                                   <li><i class="fa fa-fw fa-circle"></i>Salud ocupacional</li>
+                                </ul>                                
+                            </div>
+                        </div>
                     </div>
-               </div> 
-            </div>
+                </article>
+                <article class="course-third-article">
+                   <i class="fa fa-fw fa-graduation-cap"></i>
+                    <div class="container">
+                        <div class="course-container">
+                            <div class="cfirst-container">
+                               <h1 class="sarticle-title">Especialización Tecnológica</h1>
+                                <ul class="list-unstyled courses-list">
+                                   <li><i class="fa fa-fw fa-circle"></i>Gestión en laboratorios de ensayo y calibración - Norma ISO/IEC 17025</li>
+                                   <li><i class="fa fa-fw fa-circle"></i>Supervisión de buenas prácticas de manufactura</li>
+                                </ul>                                
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
 
         </section>
         <div class="second-big-section">
             <section class="survery-section">
                 <div class="container survery-container">
                     <h1 class="survery-title">Encuestas de la red SENA</h1>
-                    <div class="col-lg-3 text-right">
-                        <div class="survery-title-container">
-                            <h1></h1>
-                            <i class="fa fa- fa-x2"></i>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
                         <ul class="list-unstyled list-survery">
                             <li class="row">
                                     <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -205,7 +191,6 @@ $this->title = 'My Yii Application';
                                     <a href="" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
                             </li>
                         </ul>
-                    </div>
                 </div>
             </section>
             <section class="gallery-section clearfix">
