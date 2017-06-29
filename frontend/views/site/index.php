@@ -12,8 +12,12 @@ $this->title = 'My Yii Application';
 
             <p class="lead">You have successfully created your Yii-powered application.</p>
 
-            <div class="mouse center-block">
+            <!--<div class="mouse center-block">
                 <span class="scroll-mouse"></span>
+            </div>-->
+            <div class="center-block arrow-header">
+                <!--<i class="glyphicon glyphicon-chevron-down"></i>-->
+                <i class="fa fa-fw fa-arrow-down"></i>
             </div>
 
             <nav class="social-networks-right">

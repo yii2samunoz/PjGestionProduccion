@@ -229,6 +229,14 @@ a.desc:after {
 .social-networks-right {
     display: none;
 }
+.arrow-header {
+    position: relative;
+    margin-top: 33vh;
+    color: #fc7323;
+    z-index: 10;
+    text-align: center;
+    font-size: 3rem;
+}
 .mouse, .jumbotron-title, .jumbotron .lead {
     position: relative;
     z-index: 2;

@@ -69,5 +69,11 @@ jQuery(document).ready(function($) {
         easing: "easeInBack"
       });
     });
+    $icon = $('.arrow-header i');
+    $icon.velocity({
+      translateY: "10px"
+    }, {
+      loop: true
+    }).velocity("reverse");
 
 });
