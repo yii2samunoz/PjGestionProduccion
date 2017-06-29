@@ -180,15 +180,15 @@ $this->title = 'My Yii Application';
                         <ul class="list-unstyled list-survery">
                             <li class="row">
                                     <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <a href="" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
+                                    <a href="https://goo.gl/forms/WkC2sucoJIRgocsg1" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
                             </li>
                             <li class="row">
                                     <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit,  amet, consectetur adipisicing amet, consectetur adipisicing  amet, consectetur adipisicing</p>
-                                    <a href="" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
+                                    <a href="https://goo.gl/forms/WkC2sucoJIRgocsg1" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
                             </li>
                             <li class="row">
                                     <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, consectetur adipisicing elitconsectetur adipisicing elitconsectetur adipisicing elit</p>
-                                    <a href="" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
+                                    <a href="https://goo.gl/forms/WkC2sucoJIRgocsg1" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
                             </li>
                         </ul>
                 </div>
