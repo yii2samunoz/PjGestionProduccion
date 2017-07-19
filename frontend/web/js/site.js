@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
 
-    // Labels Effects 
+    // Labels Effects
     $(window).load(function(){
         $(".form-group .label-effect").val("");
-        
+
         $(".form-group .label-effect").focusout(function(){
             if($(this).val() != ""){
                 $(this).addClass("has-content");
@@ -13,8 +13,35 @@ jQuery(document).ready(function($) {
         })
     });
 
+    // object-fit
+    var userAgent, ieReg, ie;
+    userAgent = window.navigator.userAgent;
+    ieReg = /msie|Trident.*rv[ :]*11\./gi;
+    ie = ieReg.test(userAgent);
+
+    if(ie) {
+        $(".imageContainer").each(function () {
+            var $container = $(this),
+                imgUrl = $container.find("img").prop("src");
+            if (imgUrl) {
+              $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("custom-object-fit");
+            }
+        });
+    }
 
     //Owl-Carousel
+    var hCarousel = $('#hCarousel');
+    $(hCarousel).owlCarousel({
+        items: 1
+    });
+    var courseCarousel1 = $('#courseCarousel1');
+    $(courseCarousel1).owlCarousel({
+        items: 2,
+        margin: 40,
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
+    });
+
     $('.owl-carousel').owlCarousel({
         margin: 40,
         autoplay: true,
@@ -38,7 +65,7 @@ jQuery(document).ready(function($) {
                 items: 2
             }
         }
-    	
+
     });
 
     $('.gallerybox').gallerybox();
@@ -64,12 +91,12 @@ jQuery(document).ready(function($) {
 
     var backToTop = $('.back-to-top');
     backToTop.on("click", function() {
-      $("body").velocity("scroll", { 
+      $("body").velocity("scroll", {
         duration: 2000,
         easing: "easeInBack"
       });
     });
-    $icon = $('.arrow-header i');
+    $icon = $('.arrow-header');
     $icon.velocity({
       translateY: "10px"
     }, {

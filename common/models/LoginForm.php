@@ -31,6 +31,13 @@ class LoginForm extends Model
         ];
     }
 
+    public function attributeLabels()
+        {
+            return array(
+                'rememberMe'=>'Permanecer con la sesión iniciada',
+            );
+        }
+
     /**
      * Validates the password.
      * This method serves as the inline validation for password.

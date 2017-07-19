@@ -5,20 +5,27 @@ use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron jumbotron-index hero-index">
+    <header class="jumbotron jumbotron-index hero-index">
+        <div class="owl-carousel" id="hCarousel">
+            <div class="imageContainer">
+                <?= Html::img('@web/images/hero.jpg', ['class' => 'featured-image', 'alt' => 'hero']) ?>
+                <div class="jumbotron-container container">
+                    <h1 class="jumbotron-title text-right">Red de Conocimiento<br>Gestión de la producción</h1>
+                </div>
+            </div>
+            <div class="imageContainer">
+                <?= Html::img('@web/images/CS_howdoi.jpg', ['class' => 'featured-image', 'alt' => 'hero']) ?>
+                <div class="jumbotron-container">
+                    <h1 class="jumbotron-title text-right">Estudia en nuestra <strong>institución</strong></h1>
+                </div>
+            </div>
+        </div>
+        <i class="arrow-header fa fa-chevron-down"></i>
         <div class="container">
-            <h1 class="jumbotron-title text-right">Red de Conocimiento<br>Gestión de la producción</h1>
-
-            <p class="lead">You have successfully created your Yii-powered application.</p>
 
             <!--<div class="mouse center-block">
-                <span class="scroll-mouse"></span>
-            </div>-->
-            <div class="center-block arrow-header">
-                <!--<i class="glyphicon glyphicon-chevron-down"></i>-->
-                <i class="fa fa-fw fa-arrow-down"></i>
-            </div>
+            <span class="scroll-mouse"></span>
+        </div>-->
 
             <nav class="social-networks-right">
                 <a href="" class="facebook-link"><i class="fa fa-facebook fa-2x"></i></a>
@@ -26,200 +33,206 @@ $this->title = 'My Yii Application';
                 <a href="" class="instagram-link"><i class="fa fa-instagram fa-2x"></i></a>
                 <a href="" class="google-plus-link"><i class="fa fa-google-plus fa-2x"></i></a>
             </nav>
-            
         </div>
         <!-- <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p> -->
-    </div>
+    </header>
+
 
     <div class="body-content">
-
-        <section class="objectives-section">
+        <section class="infoSection">
+            <div class="container infoContainer">
+                <div class="column-info">
+                    <h3 class="text-uppercase">Nuestra Misión</h3>
+                    <p class="info-project-text">Articula la respuesta institucional en las áreas temáticas de gestión de operaciones industriales,
+                        propendiendo por el logro de estándares internacionales de <strong>productividad</strong>, garantizando <strong>calidad</strong> y pertinencia
+                        de la formación profesional.</p>
+                </div>
+                <div class="column-info">
+                    <h3 class="text-uppercase">Nuestra Visión</h3>
+                    <p class="info-project-text"><strong>Para el año 2020</strong> la Red de Conocimiento de Gestión de la Producción será referente a nivel nacional y en el Sena,
+                        en la actualización de diseños curriculares, nuevos programas de formación, capacitación, transferencia
+                        tecnológica, innovación y modernización de ambientes. Para el beneficio de la población colombiana y el sector
+                        productivo.</p>
+                </div>
+                <div class="column-info">
+                    <h3 class="text-uppercase">Objetivos Estratégicos</h3>
+                    <div class="info-text">
+                        <ul>
+                            <li>Estandarizar los elementos necesarios cambiantes, perfil de instructores, materiales y diseños que garanticen la calidad de la Formación Profesional Integral.</li>
+                            <li>Fortalecer el relacionamiento con el sector productivo y gubernamental para diseño e implementación de políticas, estrategias y programas que dinamicen la competitividad y productividad empresarial.</li>
+                            <li>Establecer alianzas a nivel internacional para fortalecer las capacidades del talento humano de la Red.</li>
+                            <li>Desarrollar actividades que permitan definir las líneas temáticas de los semilleros de investigación para incursionar en la estrategia Sennova y el sector externo, apoyando los centros asociados a la red.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="coursesSection">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <article class="text-center objectives-article">
-                            <h1 class="objectives-title">Misión</h1>
-
-                            <p>Articula la respuesta institucional en las áreas temáticas de gestión de operaciones industriales, 
-                                propendiendo por el logro de estándares internacionales de productividad, garantizando calidad y pertinencia 
-                                de la formación profesional.</p>                            
-                        </article>
-                        <article class="text-center objectives-article">
-                            <h1 class="objectives-title">Visión</h1>
-                            <p>Para el año 2020 la Red de Conocimiento de Gestión de la Producción será referente a nivel nacional y en el 
-                            Sena, en la actualización de diseños curriculares, nuevos programas de formación, capacitación, transferencia 
-                            tecnológica, innovación y modernización de ambientes. Para el beneficio de la población colombiana y el sector 
-                            productivo.</p>
-                        </article>
-                        <article class="objectives-article">
-                            <h1 class="text-center objectives-title">Objetivos Estratégicos</h1>
-                            <ul class="text-justify">
-                                <li>Estandarizar los elementos necesarios cambiantes, perfil de instructores, materiales y diseños que garanticen la calidad de la Formación Profesional Integral.</li>
-                                <li>Fortalecer el relacionamiento con el sector productivo y gubernamental para diseño e implementación de políticas, estrategias y programas que dinamicen la competitividad y productividad empresarial.</li>
-                                <li>Establecer alianzas a nivel internacional para fortalecer las capacidades del talento humano de la Red.</li>
-                                <li>Desarrollar actividades que permitan definir las líneas temáticas de los semilleros de investigación para incursionar en la estrategia Sennova y el sector externo, apoyando los centros asociados a la red.</li>
-                            </ul>
-                        </article>
-                    </div>
-                    
-                </div>            
-            </div>            
-        </section>
-        <div class="big-section">           
-        
-            <section class="news-section">
-                <div class="container news-section-content">
-                    <div class="row">
-                        
-                        <div class="col-lg-4">
-                            <div class="news-title-container">
-                                <h1>Noticias de la red SENA</h1>
-                                <span class="fa fa-fw fa-newspaper-o picture-icon"></span>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="owl-carousel">
-                                <div class="news-container">
-                                    <figure>
-                                        <div class="news-image-container">
-                                            <?= Html::img('@web/images/DAMyzo9UQAET6cY.jpg', ['class' => 'photo-news', 'alt' => 'photo-news']) ?>
+                    <div class="col-lg-12">
+                        <div class="owl-carousel" id="courseCarousel1">
+                            <article class="courseItem">
+                                <div class="imageContainer">
+                                    <?= Html::img('@web/images/myhc_10072.jpg', ['class' => 'featured-image', 'alt' => 'Curso Imágen']) ?>
+                                    <div class="imageInfo">
+                                        <div class="imageInfoContainer">
+                                            <!-- <h4 class="courseCategory">Técnico</h4> -->
+                                            <?= Html::a('Salud Ocupacional', ['site/coursedetail'], ['class' => 'imageInfoTitle']) ?>
+                                            <span><i class="fa fa-fw fa-calendar"></i>Inicio Clases: 15-abril-2018</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i>Duración: 12 meses</span>
                                         </div>
-                                        <div class="news-description">
-                                            <p>Consejo Directivo #SENA aprueba entrega de recursos del #FondoEmprenderSENA 
-                                            por más de $38 mil millones. Más empresas y empleos para el país</p>
-                                            <p class="news-date"><i class="fa fa-calendar"></i> 11/07/2017</p>
-
-                                        </div>
-                                    </figure>
-                                    <?= Html::img('@web/images/news-background.svg', ['class' => 'bimagen', 'alt' => 'news-figure']) ?>
+                                    </div>
                                 </div>
-                                 <div class="news-container">
-                                    <figure>
-                                        <div class="news-image-container">
-                                            <?= Html::img('@web/images/DC9KkXeWAAAhouU.jpg', ['class' => 'photo-news', 'alt' => 'photo-news']) ?>                                        
-                                        </div>
-                                        <div class="news-description">
-                                            <p>#FondoEmprenderSENA será más ágil y moderno Infórmese ingresando al enlace 
-                                            👉🏼  <a href="https://goo.gl/XDPoB5 ">https://goo.gl/XDPoB5</a></p>
-                                            <p class="news-date"><i class="fa fa-calendar"></i> 23/07/2017</p>
-                                        </div>
-                                    </figure>
-                                    <?= Html::img('@web/images/news-background.svg', ['class' => 'bimagen', 'alt' => 'news-figure']) ?>
+                                <div class="courseDescription">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, maxime quaerat nam, saepe fugiat cumque at illo et quo
+                                        autem recusandae deserunt magni aliquam hic.</p>
+                                    <div>
+                                        <?= Html::a('Leer más', ['site/coursedetail'], ['class' => 'link']) ?>
+                                    </div>
                                 </div>
-                                 <div class="news-container">
-                                    <figure>
-                                        <div class="news-image-container">
-                                            <?= Html::img('@web/images/DC83MefWAAAP94A.jpg', ['class' => 'photo-news', 'alt' => 'photo-news']) ?>
+                            </article>
+                            <article class="courseItem">
+                                <div class="imageContainer">
+                                    <?= Html::img('@web/images/Female-engineering-students.jpg', ['class' => 'featured-image', 'alt' => 'Curso Imágen']) ?>
+                                    <div class="imageInfo">
+                                        <div class="imageInfoContainer">
+                                            <?= Html::a('Alistamiento y operación de maquinaria para la producción industrial', ['site/coursedetail'], ['class' => 'imageInfoTitle']) ?>
+                                            <span><i class="fa fa-fw fa-calendar"></i>Inicio Clases: 15-abril-2018</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i>Duración: 12 meses</span>
                                         </div>
-                                        <div class="news-description">
-                                            <p>Estamos #AlAire en #SENARadio por @RadNalCo con el equipo #SENA que produjo una serie animada 
-                                            para niños en 3D.</p>
-                                            <p class="news-date"><i class="fa fa-calendar"></i> 22/07/2017</p>
-                                        </div>
-                                    </figure>
-                                    <?= Html::img('@web/images/news-background.svg', ['class' => 'bimagen', 'alt' => 'news-figure']) ?>
-
+                                    </div>
                                 </div>
-                            </div>                        
+                                <div class="courseDescription">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, maxime quaerat nam, saepe fugiat cumque at illo et quo
+                                        autem recusandae deserunt magni aliquam hic.</p>
+                                    <?= Html::a('Leer más', ['site/coursedetail'], ['class' => 'link']) ?>
+                                </div>
+                            </article>
+                            <article class="courseItem">
+                                <div class="imageContainer">
+                                    <?= Html::img('@web/images/Female-engineering-students.jpg', ['class' => 'featured-image', 'alt' => 'Curso Imágen']) ?>
+                                    <div class="imageInfo">
+                                        <div class="imageInfoContainer">
+                                            <?= Html::a('Alistamiento y operación de maquinaria para la producción industrial', ['site/coursedetail'], ['class' => 'imageInfoTitle']) ?>
+                                            <span><i class="fa fa-fw fa-calendar"></i>Inicio Clases: 15-abril-2018</span>
+                                            <span><i class="fa fa-fw fa-clock-o"></i>Duración: 12 meses</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="courseDescription">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, maxime quaerat nam, saepe fugiat cumque at illo et quo
+                                        autem recusandae deserunt magni aliquam hic.</p>
+                                    <?= Html::a('Leer más', ['site/coursedetail'], ['class' => 'link']) ?>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <!-- <div class="course2"></div>
+            <div class="course3"></div> -->
+        </section>
+        <section class="clearfix newsSection">
+            <div class="container">
+                <div class="sectionDescription text-center">
+                    <h1>Our Latest News Updates</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil optio at vel, a soluta consequatur.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <article class="newsCard">
+                            <div class="imageContainer">
+                                <div class="news-date">
+                                    <div class="text-uppercase">JUL</div>
+                                    <div>20</div>
+                                </div>
+                                <?= Html::img('@web/images/DAMyzo9UQAET6cY.jpg', ['class' => 'featured-image', 'alt' => 'Noticia Imágen']) ?>
+                            </div>
+                            <div class="newsBody">
+                                <p>Consejo Directivo #SENA aprueba entrega de recursos del #FondoEmprenderSENA
+                                por más de $38 mil millones. Más empresas y empleos para el país</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <article class="newsCard">
+                            <div class="imageContainer">
+                                <div class="news-date">
+                                    <div class="text-uppercase">JUL</div>
+                                    <div>20</div>
+                                </div>
+                                <?= Html::img('@web/images/DC83MefWAAAP94A.jpg', ['class' => 'featured-image', 'alt' => 'Noticia Imágen']) ?>
+                            </div>
+                            <div class="newsBody">
+                                <p>Estamos #AlAire en #SENARadio por @RadNalCo con el equipo #SENA que produjo una serie animada
+                                para niños en 3D.</p>
+                            </div>
+                        </article>
 
-        </div>
-        <section class="courses-section">
-                <article class="course-first-article">
-                    <div class="container">
-                        <h1 class="section-course-title">Programas de Fomación <strong>SENA</strong></h1>
-                        <div class="course-container">                    
-                            <div class="cfirst-container">
-                               <h1 class="sarticle-title">Técnicos</h1>
-                                <ul class="list-unstyled courses-list">
-                                   <li><i class="fa fa-fw fa-circle"></i>Salud Ocupacional</li>
-                                   <li><i class="fa fa-fw fa-circle"></i>Alistamiento y operación de maquinaria para la producción industrial</li>
-                                   <li><i class="fa fa-fw fa-circle"></i>Procesos de manufactura</li>
-                                </ul>                                
-                            </div>
-                        </div>
                     </div>
-                </article>
-                <article class="course-second-article">
-                   <i class="fa fa-fw fa-graduation-cap"></i>
-                    <div class="container">
-                        <div class="course-container">
-                            <div class="cfirst-container">
-                               <h1 class="sarticle-title">Tecnólogos</h1>
-                                <ul class="list-unstyled courses-list">
-                                   <li><i class="fa fa-fw fa-circle"></i>Gestión integrada de la calidad, medio ambiente, seguridad y salud ocupacional</li>
-                                   <li><i class="fa fa-fw fa-circle"></i>Gestión de la producción industrial</li>
-                                   <li><i class="fa fa-fw fa-circle"></i>Gestión de recursos en plantas de producción</li>
-                                   <li><i class="fa fa-fw fa-circle"></i>Salud ocupacional</li>
-                                </ul>                                
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <article class="newsCard">
+                            <div class="imageContainer">
+                                <div class="news-date">
+                                    <div class="text-uppercase">JUL</div>
+                                    <div>20</div>
+                                </div>
+                                <?= Html::img('@web/images/DC9KkXeWAAAhouU.jpg', ['class' => 'featured-image', 'alt' => 'Noticia Imágen']) ?>
                             </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="course-third-article">
-                   <i class="fa fa-fw fa-graduation-cap"></i>
-                    <div class="container">
-                        <div class="course-container">
-                            <div class="cfirst-container">
-                               <h1 class="sarticle-title">Especialización Tecnológica</h1>
-                                <ul class="list-unstyled courses-list">
-                                   <li><i class="fa fa-fw fa-circle"></i>Gestión en laboratorios de ensayo y calibración - Norma ISO/IEC 17025</li>
-                                   <li><i class="fa fa-fw fa-circle"></i>Supervisión de buenas prácticas de manufactura</li>
-                                </ul>                                
+                            <div class="newsBody">
+                                <p>#FondoEmprenderSENA será más ágil y moderno Infórmese ingresando al enlace
+                                👉🏼</p>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                </article>
-                
+                </div>
+            </div>
 
         </section>
-        <div class="second-big-section">
-            <section class="survery-section">
-                <div class="container survery-container">
-                    <h1 class="survery-title">Encuestas de la red SENA</h1>
-                        <ul class="list-unstyled list-survery">
-                            <li class="row">
-                                    <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <a href="https://goo.gl/forms/WkC2sucoJIRgocsg1" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
-                            </li>
-                            <li class="row">
-                                    <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit,  amet, consectetur adipisicing amet, consectetur adipisicing  amet, consectetur adipisicing</p>
-                                    <a href="https://goo.gl/forms/WkC2sucoJIRgocsg1" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
-                            </li>
-                            <li class="row">
-                                    <p class="col-md-9 survery-description"><i class="fa fa-fw fa-circle"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, consectetur adipisicing elitconsectetur adipisicing elitconsectetur adipisicing elit</p>
-                                    <a href="https://goo.gl/forms/WkC2sucoJIRgocsg1" class="survery-link col-md-3"><i class="fa fa-external-link"></i> Ir a la encuesta</a>
-                            </li>
-                        </ul>
+        <section class="clearfix surverySection">
+            <div class="container">
+                <div class="sectionDescription text-center">
+                    <h1>Our Surverys</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil optio at vel, a soluta consequatur.</p>
                 </div>
-            </section>
-            <section class="gallery-section clearfix">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h1 class="gallery-title">Galería SENA</h1>
-                            <p>loLorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur explicabo, molestiae deserunt.</p>
-                            <span class="fa fa-fw fa-picture-o picture-icon"></span>
-                        </div>
-                        <div class="col-lg-6 galleryccol">
-                            <div class="col-lg-6 galleryc-leftpadding">
-                                <figure class="photo-gallery-container photo-gallery-container1 second-image-container"></figure>
-                            </div>
-                            <div class="col-lg-6 galleryc-rightpadding">
-                                <figure class="photo-gallery-container photo-gallery-container2 second-image-container"></figure>
-                            </div>
-                            <div class="button-gallery-container">
-                                <button class="gallerybox">Ver más</button>
-                            </div>
-                        </div>
-                        
-                    </div>
+                <div class="table-responsive">
+                    <table class="survery-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>*</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis pariatur aliquid molestiae ex,
+                                    culpa consequuntur recusandae accusantium, nostrum expedita temporibus quos velit dolorum ipsam beatae!</td>
+                                <td><a href="https://goo.gl/forms/WkC2sucoJIRgocsg1">Ir a la encuesta</a></td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis pariatur aliquid molestiae ex,
+                                    culpa consequuntur recusandae accusantium, nostrum expedita temporibus quos velit dolorum ipsam beatae!</td>
+                                <td><a href="https://goo.gl/forms/WkC2sucoJIRgocsg1">Ir a la encuesta</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="hidden">
+            </div>
+        </section>
+        <section class="clearfix gallerySection">
+            <div class="col-lg-6 imageContainer">
+                <?= Html::img('@web/images/gallery/main-img2.jpg', ['class' => 'featured-image', 'alt' => 'photo-gallery', 'width' => '100%']) ?>
+            </div>
+            <div class="col-lg-6 imageContainer">
+                <?= Html::img('@web/images/gallery/main-img1.jpg', ['class' => 'featured-image', 'alt' => 'photo-gallery', 'width' => '100%']) ?>
+            </div>
+            <div class="buttonGalleryContainer">
+                <button type="button" class="gallerybox"><i class="fa fa-fw fa-picture-o"></i>Ver más fotos</button>
+            </div>
+            <div class="hidden">
                     <?= Html::img('@web/images/gallery/01.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
                     <?= Html::img('@web/images/gallery/02.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
                     <?= Html::img('@web/images/gallery/03.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
@@ -247,79 +260,9 @@ $this->title = 'My Yii Application';
                     <?= Html::img('@web/images/gallery/25.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
                     <?= Html::img('@web/images/gallery/26.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
                     <?= Html::img('@web/images/gallery/27.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/28.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>   
+                    <?= Html::img('@web/images/gallery/28.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
                 </div>
-            </section>
-
-        </div>
-
-    </div> <!-- /body-content -->
+        </section>
+    </div><!-- /body-content -->
 
 </div>
-<footer class="footer-index">
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-md-7">
-                <h4> INFORMACIÓN </h4>
-                <ul class="list-unstyled">
-                    <li>Servicio Nacional de Aprendizaje SENA</li>
-                    <li>Regional Distrito Capital</li>
-                    <li>
-                        <i class="fa fa-fw fa-building-o"></i> Centro de Gestión Industrial
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-map-marker"></i> <address>Dirección: Calle 15 No 31 - 42</address>
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-globe"></i> <span>Ciudad: </span> Bogotá – Colombia
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-envelope-o"></i> <a href="mailto:redproduccionsena@gmail.com">Correo Electrónico: redproduccionsena@gmail.com</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-phone"></i> <a href="tel://5925555">Líneas Gratuitas Atención al Ciudadano: Bogotá (57 1) 592 55 55</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-phone"></i> <a href="tel://018000910270">Resto del país: 01 8000 910270</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-phone"></i> <a href="tel://4049494">Líneas Gratuitas Atención al Empresario: Bogotá (57 1) 404 94 94</a>
-                    </li>
-                    <li>
-                        <i class="fa fa-fw fa-phone"></i> <a href="tel://018000910682">Resto del país: 01 8000 910682</a>
-                    </li>
-                </ul>            
-            </div>
-            <div class="col-md-5 certificados">
-                
-                <?= Html::img('@web/images/icontecA.png', ['alt' => 'img-footer']) ?>
-           
-                <?= Html::img('@web/images/icontecB.png', ['alt' => 'img-footer']) ?>
-
-                <?= Html::img('@web/images/icontecC.png', ['alt' => 'img-footer']) ?>        
-           
-                <?= Html::img('@web/images/icontecD.png', ['alt' => 'img-footer']) ?>
-                         
-            </div>
-        </div>
-        <a href="javascript:void(0)" class="back-to-top animated pull-right">
-            <i class="fa fa-angle-up"></i>
-        </a>
-        <div class="fsocialn-container">
-            <nav class="footer-social-networks">
-                <a href="" title="Facebook" class="facebook-link"><i class="fa fa-fw fa-facebook fa-2x"></i></a>
-                <a href="" title="Twitter" class="twitter-link"><i class="fa fa-fw fa-twitter fa-2x"></i></a>
-                <a href="" title="Instagram" class="instagram-link"><i class="fa fa-fw fa-instagram fa-2x"></i></a>
-                <a href="" title="Google +" class="google-plus-link"><i class="fa fa-fw fa-google-plus fa-2x"></i></a>
-            </nav>             
-        </div>
-        <!-- <p class="">&copy; Todos los derechos reservados <?= date('Y') ?></p> -->
-    </div>
-
-    <div class="footer"> 
-        <div class="container">
-            <p class="pull-left">&copy; Red de Conocimiento - Gestión de la Producción <?= date('Y') ?></p>        
-        </div>
-    </div>
-</footer>

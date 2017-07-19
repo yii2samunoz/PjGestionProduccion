@@ -24,14 +24,20 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<div class="infobar">
+    <div class="container">
+        <span>Tiene alguna pregunta?</span>
+        <a href="tel:018000910270"><i class="fa fa-fw fa-phone"></i>01 8000 910270</a>
+        <a href="mailto:redproduccionsena@gmail.com"><i class="fa fa-fw fa-envelope"></i>redproduccionsena@gmail.com</a>
+    </div>
+</div>
 <?php
 NavBar::begin([
     'brandLabel' => Html::img('@web/images/secondLogoProyecto.svg', ['class' => 'logo-navbar-index', 'alt' => 'logo']),
     'brandUrl' => Yii::$app->homeUrl,
     'brandOptions' => ['class' => 'navbar-brand-index'],
     'options' => [
-        'class' => 'navbar-default navbar-fixed-top asd',
+        'class' => 'navbar-default',
     ],
 ]);
 $menuItems = [
@@ -57,22 +63,21 @@ echo Nav::widget([
 ]);
 NavBar::end();
 ?>
-<?php if (isset($this->blocks['jumbotron-pages'])): ?>
-    <?= $this->blocks['jumbotron-pages'] ?>
-<?php endif; ?>
 
 
 <?= Alert::widget() ?>
+
 <?= $content ?>
 
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; Red de Conocimiento - Gestión de la Producción <?= date('Y') ?></p>
-
+<footer class="footer-pages">
+    <div class="footer">
+        <div class="container">
+            <p class="pull-left">&copy; Red de Conocimiento - Gestión de la Producción
+                <?= date('Y') ?>
+            </p>
+        </div>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
