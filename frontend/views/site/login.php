@@ -12,7 +12,7 @@ $this->title = 'Login';
 <section class="site-login">
     <div class="container loginFormContainer">
         <div class="page-header">
-            <span></span>
+            <?= Html::a(Html::img("@web/images/Sena_Colombia_logo.svg"), ['site/index'], ['class'=>'your_class']) ?>
         </div>
         <h2>Iniciar sesión</h2>
         <div class="loginMediaContainer">

@@ -1,5 +1,6 @@
 $docfont-color: #4b4b4b;
 $primaryColor: #fc7323;
+$headerColor: #aee247;
 @font-face {
   font-family: 'zurich-bt';
   src:  url('../fonts/zurich-bt-webfont.woff2') format('woff2'),
@@ -54,7 +55,18 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 
     .container {
-        margin-top: 2rem;
+        position: relative;
+        top: 25%;
+    }
+
+    &:after {
+        content: '';
+        background: rgba(101, 100, 96, 0.6);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 31;
     }
 }
 
@@ -202,17 +214,15 @@ a.desc:after {
 
 /* align the logout "link" (button in form) of the navbar */
 .navbar {
-    background: rgba(40, 40, 40, 0.65);
+    background: $headerColor;
     border: none;
     border-radius: 0;
-    left: 0;
     margin-bottom: 0;
-    position: absolute;
-    right: 0;
+    position: relative;
     z-index: 9999;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #ffF;
+    color: #fff;
 
     &:hover,
     &:focus {
@@ -243,20 +253,65 @@ a.desc:after {
 }
 .navbar-brand-index {
     height: inherit;
+    position: relative;
     padding: 0.4rem;
+    &:before {
+        content: '';
+        background-color: #9cd42f;
+        top: 0;
+        bottom: 0;
+        right: -75%;
+        left: -10000%;
+        position: absolute;
+        transform: skew(-10deg);
+        z-index: 0;
+    }
 }
 .navbar-right {
     margin-top: 1.5rem;
+    li {
+        &:hover {
+            a:before {
+                transform: scaleX(1);
+            }
+        }
+        a {
+            &:before {
+                background-color: #fff;
+                bottom: 0;
+                content: "";
+                height: 3px;
+                left: 0;
+                position: absolute;
+                right: 0;
+                transform: scaleX(0);
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border-top: 0.1rem solid $primaryColor;
+    border-radius: 4px 4px 0 0;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: transparent;
+    &:before {
+        transform: scaleX(1);
+    }
 }
 .logo-navbar-index {
     height: 5.5rem;
+    position: relative;
+    z-index: 2;
 }
 /*Form*/
 .control-label {
     font-weight: normal;
 }
 .form-control:focus {
-    border-color: navajowhite;
+    border-color: #fc7;
 }
 .has-error .help-block,
 .has-error .control-label,
@@ -268,7 +323,8 @@ a.desc:after {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-    color: #f01e1e;
+    color: #888;
+    font-size: 0.9rem;
 }
 .form-group {
     position: relative;
@@ -318,13 +374,10 @@ input::placeholder {
 .table {
     cursor: cell;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    border-top: 0.1rem solid $primaryColor;
-    border-radius: 4px 4px 0 0;
-}
+
 
 .infobar {
-    background: #80c416;
+    background: #e6e6e6;
     color: #fff;
     font-size: 0.9rem;
     padding: 0.8rem;
@@ -359,14 +412,15 @@ input::placeholder {
         z-index: 22;
     }
     &:after {
-        background: url(../images/recursoHeader.png) no-repeat;
-        bottom: -2rem;
+        background: url(../images/recurso-header.png) no-repeat;
+        bottom: 0rem;
         content: '';
+        display: inline-block;
         height: 15rem;
-        left: -13rem;
+        left: -2rem;
         position: absolute;
         right: 0;
-        width: 100%;
+        width: 18rem;
         z-index: 20;
     }
 }
@@ -392,7 +446,8 @@ input::placeholder {
                         z-index: 10;
                         .jumbotron-title {
                             margin-right: 4rem;
-                            margin-top: 13rem;
+                            position: relative;
+                            top: 30%;
                         }
                     }
                 }
@@ -729,45 +784,6 @@ Progrmas de formación
         }
     }
 }
-// Gallery
-.gallerySection {
-    
-    position: relative;
-    .imageContainer {
-        height: 25rem;
-        padding: 0;
-        img {
-            height: inherit;
-        }
-    }
-    .buttonGalleryContainer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.48);
-        display: flex;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-        opacity: 1;
-        transition: all 0.3s ease;
-
-        button {
-            background: linear-gradient(90deg,#19b5c1,#28c88c);
-            border: none;
-            color: #fff;
-            padding: 0.7rem;
-
-            i {
-                font-size: 2rem;
-                margin-right: 0.4rem;
-                vertical-align: middle;
-            }
-        }
-    }
-
-}
 
 // Login
 .site-request-password-reset,
@@ -775,8 +791,7 @@ Progrmas de formación
     height: 82vh;
     padding-top: 5rem;
     .page-header {
-        span {
-            background: url(../images/Sena_Colombia_logo.svg) no-repeat;
+        img {
             display: inline-block;
             height: 2rem;
             width: 2rem;
@@ -931,104 +946,38 @@ Progrmas de formación
 .site-contact {
     .bodyContact {
         padding: 8rem 0;
-    }
-    .contact {
-        &:after {
-            content: '';
-            background: rgba(101, 100, 96, 0.6);
-            height: 100%;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 31;
-        }
-    }
-    .info-part-title {
-        height: 6rem;
-        margin-bottom: 2rem;
-    }
-    .contact-info {
-        .section-info:first-child {
-            border-top: 1px solid #fc7;
-        }
-        .section-info {
-            border-bottom: 1px solid #fc7;
-            line-height: 2.1;
-            padding: 1rem 0;
-            .box-icon {
-                display: inline-block;
-                float: left;
-                text-align: center;
-                width: 10%;
 
-                i {
-                    color: #fc7323;
-                    font-size: 1.4rem;
+        .contact-heading {
+            h1 {
+                font-size: 4rem;
+            }
+
+        }
+        #contact-form {
+            textarea {
+                background: #f1f1f1;
+                border: 1px solid #eee;
+                &:focus {
+                    border: 1px solid #fc7;
                 }
             }
-            .box-info {
-                display: inline-block;
-                width: 89%;
-                a {
-                    color: rgb(159, 159, 159);
-                    display: block !important;
+            input, select {
+                height: 3.2rem;
+                padding: 1rem;
+                @extend textarea;
+
+                &:focus {
+                    border: 1px solid #fc7;
                 }
             }
         }
     }
+
     #googleMap {
-        filter: grayscale(20%);
-        height: 400px;
+        height: 500px;
         float: right;
         // height: 16.45rem;
-        width: 60%;
+        width: 100%;
         z-index: 2;
-    }
-    .map-section {
-        position: relative;
-        .infoContactContainer {
-            div:nth-child(1) {
-                position: relative;
-                text-align: center;
-                z-index: 2;
-
-                i {
-                    font-size: 8rem;
-                    margin-top: 4rem;
-                }
-            }
-            // &:before {
-            //     content: '';
-            //     background: url(../images/Sena_Colombia_logoBlanco.svg) no-repeat center;
-            //     display: inline-block;
-            //     height: 20%;
-            //     margin-top: 7rem;
-            //     position: relative;
-            //     width: 100%;
-            // }
-            background: url(../images/Captura.png);
-            color: #fff;
-            height: 400px;
-            left: 0;
-            padding: 2rem;
-            position: absolute;
-            top: 0;
-            width: 40%;
-            z-index: 12;
-
-            address {
-                font-size: 1.5rem;
-            }
-            &:after {
-                background: rgba(#fc7323, 0.88);
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-        }
     }
 }

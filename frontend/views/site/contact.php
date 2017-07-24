@@ -19,47 +19,11 @@ $this->title = 'Contáctenos';
     </header>
     <div class="container bodyContact">
         <div class="row">
-            <div class="col-lg-6 contact-info">
-                <div class="info-part-title">
-                    <h1>Contact Info</h1>
-                </div>
+            <div class="col-lg-8 col-lg-offset-2">
                 <div>
-                    <div class="section-info">
-                        <div class="box-icon">
-                            <i class="fa fa-fw fa-phone"></i>
-                        </div>
-                        <div class="box-info">
-                            <h4>Teléfonos Línea Ciudadano</h4>
-                            <a href="tel:018000910270">Línea Gratuita Nacional 01 8000 910 270</a>
-                            <a href="tel:5925555">Línea Bogotá, D.C. (57 1) 592 55 55</a>
-                        </div>
+                    <div class="contact-heading">
+                        <h1 class="text-center">Envíanos un <br> <strong>Mensaje</strong></h1>
                     </div>
-                    <div class="section-info">
-                        <div class="box-icon">
-                            <i class="fa fa-fw fa-phone"></i>
-                        </div>
-                        <div class="box-info">
-                            <h4>Teléfonos Línea Empresarial</h4>
-                            <a href="tel:018000910682">Línea Gratuita Nacional 01 8000 910 682</a>
-                            <a href="tel:4049494">Línea Bogotá, D.C. (57 1) 404 94 94</a>
-                        </div>
-                    </div>
-                    <div class="section-info">
-                        <div class="box-icon">
-                            <i class="fa fa-fw fa-envelope"></i>
-                        </div>
-                        <div class="box-info">
-                            <h4>Correo Electrónico</h4>
-                            <a href="mailto:redproduccionsena@gmail.com">redproduccionsena@gmail.com</a>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="info-part-title">
-                    <h1>Mensaje</h1>
                     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
                         <div class="alert alert-success">
@@ -85,31 +49,31 @@ $this->title = 'Contáctenos';
                         </p>
                 </div>
 
-                    <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <?= $form->field($model, 'name')->input('text', ['class' => 'form-control', 'placeholder' => 'Nombre *'])->label(false) ?>
-                        </div>
-                        <div class="col-lg-6">
-                            <?= $form->field($model, 'email')->input('email', ['class' => 'form-control', 'placeholder' => 'Correo Electrónico *'])->label(false) ?>
-                        </div>
+                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <?= $form->field($model, 'name')->input('text', ['class' => 'form-control', 'placeholder' => 'Nombre *'])->label(false) ?>
                     </div>
-                    <?= $form->field($model, 'subject')->dropDownList(['consulta' => 'Consulta', 'queja' => 'Queja', 'sugerencia' => 'Sugerencia'], ['prompt'=>'Seleccione una opción', 'class' => 'form-control'])->label('Asunto') ?>
-
-                    <?= $form->field($model, 'body')->textarea(['rows' => 3, 'class' => 'form-control', 'placeholder' => 'Mensaje *'])->label(false) ?>
-
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                        ]) ?>
-
-                        <div class="form-group">
-                            <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                        </div>
-
-                        <?php ActiveForm::end(); ?>
-
+                    <div class="col-lg-6">
+                        <?= $form->field($model, 'email')->input('email', ['class' => 'form-control', 'placeholder' => 'Correo Electrónico *'])->label(false) ?>
                     </div>
-                <?php endif; ?>
+                </div>
+                <?= $form->field($model, 'subject')->dropDownList(['consulta' => 'Consulta', 'queja' => 'Queja', 'sugerencia' => 'Sugerencia'], ['prompt'=>'Asunto', 'class' => 'form-control'])->label(false) ?>
+
+                <?= $form->field($model, 'body')->textarea(['rows' => 7, 'class' => 'form-control', 'placeholder' => 'Mensaje *'])->label(false) ?>
+
+                <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                    ]) ?>
+
+                    <div class="form-group">
+                        <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    </div>
+
+                    <?php ActiveForm::end(); ?>
+
+                </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="map-section">

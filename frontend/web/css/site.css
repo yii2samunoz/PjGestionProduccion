@@ -48,7 +48,16 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 6rem;
   position: relative; }
   .jumbotron-pages .container {
-    margin-top: 2rem; }
+    position: relative;
+    top: 25%; }
+  .jumbotron-pages:after {
+    content: '';
+    background: rgba(101, 100, 96, 0.6);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 31; }
 
 .jumbotron .btn {
   font-size: 21px;
@@ -169,17 +178,15 @@ a.desc:after {
 
 /* align the logout "link" (button in form) of the navbar */
 .navbar {
-  background: rgba(40, 40, 40, 0.65);
+  background: #aee247;
   border: none;
   border-radius: 0;
-  left: 0;
   margin-bottom: 0;
-  position: absolute;
-  right: 0;
+  position: relative;
   z-index: 9999; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #ffF; }
+  color: #fff; }
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #fff; }
 
@@ -202,20 +209,60 @@ a.desc:after {
 
 .navbar-brand-index {
   height: inherit;
+  position: relative;
   padding: 0.4rem; }
+  .navbar-brand-index:before {
+    content: '';
+    background-color: #9cd42f;
+    top: 0;
+    bottom: 0;
+    right: -75%;
+    left: -10000%;
+    position: absolute;
+    -webkit-transform: skew(-10deg);
+            transform: skew(-10deg);
+    z-index: 0; }
 
 .navbar-right {
   margin-top: 1.5rem; }
+  .navbar-right li:hover a:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  .navbar-right li a:before {
+    background-color: #fff;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  border-top: 0.1rem solid #fc7323;
+  border-radius: 4px 4px 0 0; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: transparent; }
+  .navbar-default .navbar-nav > .active > a:before, .navbar-default .navbar-nav > .active > a:hover:before, .navbar-default .navbar-nav > .active > a:focus:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
 
 .logo-navbar-index {
-  height: 5.5rem; }
+  height: 5.5rem;
+  position: relative;
+  z-index: 2; }
 
 /*Form*/
 .control-label {
   font-weight: normal; }
 
 .form-control:focus {
-  border-color: navajowhite; }
+  border-color: #fc7; }
 
 .has-error .help-block,
 .has-error .control-label,
@@ -227,7 +274,8 @@ a.desc:after {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-  color: #f01e1e; }
+  color: #888;
+  font-size: 0.9rem; }
 
 .form-group {
   position: relative; }
@@ -257,15 +305,15 @@ input[type=checkbox] {
   margin-right: 0.4rem;
   vertical-align: top; }
 
-textarea::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder, .site-contact .bodyContact #contact-form input::-webkit-input-placeholder, .site-contact .bodyContact #contact-form select::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
   color: #666 !important; }
 
-textarea:-ms-input-placeholder,
+textarea:-ms-input-placeholder, .site-contact .bodyContact #contact-form input:-ms-input-placeholder, .site-contact .bodyContact #contact-form select:-ms-input-placeholder,
 input:-ms-input-placeholder {
   color: #666 !important; }
 
-textarea::placeholder,
+textarea::placeholder, .site-contact .bodyContact #contact-form input::placeholder, .site-contact .bodyContact #contact-form select::placeholder,
 input::placeholder {
   color: #666 !important; }
 
@@ -284,12 +332,8 @@ input::placeholder {
 .table {
   cursor: cell; }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  border-top: 0.1rem solid #fc7323;
-  border-radius: 4px 4px 0 0; }
-
 .infobar {
-  background: #80c416;
+  background: #e6e6e6;
   color: #fff;
   font-size: 0.9rem;
   padding: 0.8rem; }
@@ -317,14 +361,15 @@ input::placeholder {
     text-align: center;
     z-index: 22; }
   .hero-index:after {
-    background: url(../images/recursoHeader.png) no-repeat;
-    bottom: -2rem;
+    background: url(../images/recurso-header.png) no-repeat;
+    bottom: 0rem;
     content: '';
+    display: inline-block;
     height: 15rem;
-    left: -13rem;
+    left: -2rem;
     position: absolute;
     right: 0;
-    width: 100%;
+    width: 18rem;
     z-index: 20; }
 
 #hCarousel {
@@ -345,7 +390,8 @@ input::placeholder {
       z-index: 10; }
       #hCarousel .owl-stage-outer .owl-stage .owl-item .imageContainer .jumbotron-container .jumbotron-title {
         margin-right: 4rem;
-        margin-top: 13rem; }
+        position: relative;
+        top: 30%; }
     #hCarousel .owl-stage-outer div {
       height: 100%; }
 
@@ -599,50 +645,12 @@ Progrmas de formación
         .survery-table tbody tr td:last-child {
           width: 10rem; }
 
-.gallerySection {
-  position: relative; }
-  .gallerySection .imageContainer {
-    height: 25rem;
-    padding: 0; }
-    .gallerySection .imageContainer img {
-      height: inherit; }
-  .gallerySection .buttonGalleryContainer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.48);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    opacity: 1;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    .gallerySection .buttonGalleryContainer button {
-      background: -webkit-gradient(linear, left top, right top, from(#19b5c1), to(#28c88c));
-      background: linear-gradient(90deg, #19b5c1, #28c88c);
-      border: none;
-      color: #fff;
-      padding: 0.7rem; }
-      .gallerySection .buttonGalleryContainer button i {
-        font-size: 2rem;
-        margin-right: 0.4rem;
-        vertical-align: middle; }
-
 .site-request-password-reset,
 .site-login {
   height: 82vh;
   padding-top: 5rem; }
-  .site-request-password-reset .page-header span,
-  .site-login .page-header span {
-    background: url(../images/Sena_Colombia_logo.svg) no-repeat;
+  .site-request-password-reset .page-header img,
+  .site-login .page-header img {
     display: inline-block;
     height: 2rem;
     width: 2rem; }
@@ -755,70 +763,20 @@ Progrmas de formación
 
 .site-contact .bodyContact {
   padding: 8rem 0; }
-.site-contact .contact:after {
-  content: '';
-  background: rgba(101, 100, 96, 0.6);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 31; }
-.site-contact .info-part-title {
-  height: 6rem;
-  margin-bottom: 2rem; }
-.site-contact .contact-info .section-info:first-child {
-  border-top: 1px solid #fc7; }
-.site-contact .contact-info .section-info {
-  border-bottom: 1px solid #fc7;
-  line-height: 2.1;
-  padding: 1rem 0; }
-  .site-contact .contact-info .section-info .box-icon {
-    display: inline-block;
-    float: left;
-    text-align: center;
-    width: 10%; }
-    .site-contact .contact-info .section-info .box-icon i {
-      color: #fc7323;
-      font-size: 1.4rem; }
-  .site-contact .contact-info .section-info .box-info {
-    display: inline-block;
-    width: 89%; }
-    .site-contact .contact-info .section-info .box-info a {
-      color: #9f9f9f;
-      display: block !important; }
+  .site-contact .bodyContact .contact-heading h1 {
+    font-size: 4rem; }
+  .site-contact .bodyContact #contact-form textarea, .site-contact .bodyContact #contact-form input, .site-contact .bodyContact #contact-form select {
+    background: #f1f1f1;
+    border: 1px solid #eee; }
+    .site-contact .bodyContact #contact-form textarea:focus, .site-contact .bodyContact #contact-form input:focus, .site-contact .bodyContact #contact-form select:focus {
+      border: 1px solid #fc7; }
+  .site-contact .bodyContact #contact-form input, .site-contact .bodyContact #contact-form select {
+    height: 3.2rem;
+    padding: 1rem; }
+    .site-contact .bodyContact #contact-form input:focus, .site-contact .bodyContact #contact-form select:focus {
+      border: 1px solid #fc7; }
 .site-contact #googleMap {
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
-  height: 400px;
+  height: 500px;
   float: right;
-  width: 60%;
+  width: 100%;
   z-index: 2; }
-.site-contact .map-section {
-  position: relative; }
-  .site-contact .map-section .infoContactContainer {
-    background: url(../images/Captura.png);
-    color: #fff;
-    height: 400px;
-    left: 0;
-    padding: 2rem;
-    position: absolute;
-    top: 0;
-    width: 40%;
-    z-index: 12; }
-    .site-contact .map-section .infoContactContainer div:nth-child(1) {
-      position: relative;
-      text-align: center;
-      z-index: 2; }
-      .site-contact .map-section .infoContactContainer div:nth-child(1) i {
-        font-size: 8rem;
-        margin-top: 4rem; }
-    .site-contact .map-section .infoContactContainer address {
-      font-size: 1.5rem; }
-    .site-contact .map-section .infoContactContainer:after {
-      background: rgba(252, 115, 35, 0.88);
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%; }

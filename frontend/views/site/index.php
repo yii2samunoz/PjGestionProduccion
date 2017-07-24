@@ -222,47 +222,6 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
         </section>
-        <section class="clearfix gallerySection">
-            <div class="col-lg-6 imageContainer">
-                <?= Html::img('@web/images/gallery/main-img2.jpg', ['class' => 'featured-image', 'alt' => 'photo-gallery', 'width' => '100%']) ?>
-            </div>
-            <div class="col-lg-6 imageContainer">
-                <?= Html::img('@web/images/gallery/main-img1.jpg', ['class' => 'featured-image', 'alt' => 'photo-gallery', 'width' => '100%']) ?>
-            </div>
-            <div class="buttonGalleryContainer">
-                <button type="button" class="gallerybox"><i class="fa fa-fw fa-picture-o"></i>Ver más fotos</button>
-            </div>
-            <div class="hidden">
-                    <?= Html::img('@web/images/gallery/01.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/02.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/03.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/04.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/05.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/06.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/07.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/08.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/09.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/10.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/11.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/12.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/13.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/14.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/15.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/16.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/17.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/18.png', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/19.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/20.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/21.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/22.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/23.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/24.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/25.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/26.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/27.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                    <?= Html::img('@web/images/gallery/28.jpg', ['class' => 'gallerybox', 'alt' => 'photo-gallery', 'height' => '100%']) ?>
-                </div>
-        </section>
     </div><!-- /body-content -->
 
 </div>
